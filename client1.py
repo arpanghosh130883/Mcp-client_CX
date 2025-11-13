@@ -9,7 +9,7 @@ load_dotenv()
 
 SERVERS = { 
     "math": {
-        "transport": "stdio",
+        "transport": "stdio",  # Local server
         "command": "/Library/Frameworks/Python.framework/Versions/3.11/bin/uv",
         "args": [
             "run",
@@ -19,7 +19,7 @@ SERVERS = {
        ]
     },
     "expense": {
-        "transport": "streamable_http",  # if this fails, try "sse"
+        "transport": "streamable_http",  # if this fails, try "sse"  # Remote server
         "url": "https://splendid-gold-dingo.fastmcp.app/mcp"
     },
     "manim-server": {
